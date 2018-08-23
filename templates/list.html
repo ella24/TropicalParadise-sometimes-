@@ -1,0 +1,10 @@
+{% extends 'layout.html' %}
+{% block content %}
+<p>Paradise...sometimes:</p>
+<ul>
+  {% for beach in beaches %}
+    <li><a href="{{ url_for('show', index=beach.index) }}">{{ beach.beach_name }}</a></li>
+
+  {% endfor %}
+</ul>
+{% endblock %}
