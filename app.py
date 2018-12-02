@@ -14,10 +14,6 @@ class Beach(db.Model):
   }
   index = db.Column(db.Integer, primary_key=True)
 
-@app.route("/")
-def hello():
-  return "This is a cool website about schools"
-
 @app.route("/beaches/")
 def list():
   beaches = Beach.query.all()
